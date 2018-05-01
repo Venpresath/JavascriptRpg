@@ -9,10 +9,11 @@
         let playerName = prompt("What's your name?");
 
         while (done != true) {
-            attackDamage = Math.floor(Math.random() * 2) + 1;
+            grantDamage = Math.floor(Math.random() * 2) + 1;
+            userDamage = Math.floor(Math.random() * 2) + 1;
             //count player damage down
-            console.log(`${playerName}'s health is ${playerHealth -= attackDamage}`);
-            console.log(`Grant's health is ${grantHealth -= attackDamage}`);
+            console.log(`${playerName}'s health is ${playerHealth -= grantDamage}`);
+            console.log(`Grant's health is ${grantHealth -= userDamage}`);
             //check win conditions
             if (grantHealth <= 0) {
                 wins++
