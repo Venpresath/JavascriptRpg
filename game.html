@@ -1,35 +1,5 @@
+<script src="game.js"></script>
+
 <script>
-    let gameStart = prompt("Would you like to play?");
-    let playerHealth = 40;
-    let grantHealth = 10;
-    let done = false;
-    let wins = 0;
-
-    if (gameStart === "yes") {
-        let playerName = prompt("What's your name?");
-
-        while (done != true) {
-            grantDamage = Math.floor(Math.random() * 2) + 1;
-            userDamage = Math.floor(Math.random() * 2) + 1;
-            //count player damage down
-            console.log(`${playerName}'s health is ${playerHealth -= grantDamage}`);
-            console.log(`Grant's health is ${grantHealth -= userDamage}`);
-            //check win conditions
-            if (grantHealth <= 0) {
-                wins++
-                if (wins === 3) {
-                    done = true;
-                    console.log(`${playerName} is the winner!`);
-                } else {
-                    grantHealth = 10;
-                }
-            }
-            else if (playerHealth <= 0) {
-                done = true;
-                console.log("Grant is the winner!");
-                break;
-            }
-        }
-    }
-
+    startGame();
 </script>
